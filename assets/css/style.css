@@ -2168,3 +2168,94 @@ textarea.form-input::-webkit-resizer {
 
 }
 
+  /* Overlay background */
+  .modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .modal.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Modal content popup */
+  .modal-content {
+    background: hsl(240, 2%, 12%);
+    color: hsl(0, 0%, 85%);
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .modal.show .modal-content {
+    animation: popupFade 1s ease forwards;
+  }
+
+  @keyframes popupFade {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .modal-content img {
+    width: 100%; max-height: 300px; object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  #portfolioModalTitle {
+    color: hsl(0, 0%, 95%);
+    margin-bottom: 10px;
+  }
+
+  #portfolioCategory {
+    color: hsl(0, 0%, 80%);
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  #portfolioModalDesc {
+    color: hsl(0, 0%, 80%);
+  }
+
+  .portfolio-close-btn {
+    position: absolute; top: 10px; right: 15px;
+    font-size: 24px; cursor: pointer;
+    color: hsl(0, 0%, 70%);
+    transition: color 0.2s;
+  }
+  .portfolio-close-btn:hover {
+    color: hsl(0, 0%, 95%);
+  }
+
+  /* Zoom effect for modal image */
+#portfolioModalImg {
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+#portfolioModalImg.zoomed {
+  transform: scale(1.8); /* zoom factor */
+  cursor: zoom-out;
+}

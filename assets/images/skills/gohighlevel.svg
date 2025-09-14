@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+     width="800" height="800" 
+     viewBox="0 0 800 800">
+
+  <!-- Group centered in canvas -->
+  <g transform="translate(100,250)">
+    <!-- Yellow Arrow -->
+    <polygon points="0,300 60,300 60,100 90,100 30,20 -30,100 0,100" fill="#FEC112"/>
+    
+    <!-- Blue Arrow -->
+    <polygon points="120,300 180,300 180,180 210,180 150,100 90,180 120,180" fill="#4385F5"/>
+    
+    <!-- Green Arrow -->
+    <polygon points="240,300 300,300 300,100 330,100 270,20 210,100 240,100" fill="#09C269"/>
+    
+    <!-- Text -->
+    <text x="380" y="280" 
+          font-family="Montserrat, Poppins, Arial, sans-serif" 
+          font-size="160" 
+          font-weight="bold" 
+          fill="black">
+      HighLevel
+    </text>
+  </g>
+
+</svg>
